@@ -7,17 +7,14 @@
 <body>
 
     <?php include("components/header.php");
-    
+    include_once("../model/models.php");
+
     if(isset($_POST['crearUsuario'])){
         $nombre = $_POST['nombreC'];
         $correo = $_POST['correoC'];
         $login =  $_POST['loginC'];
         if(isset($nombre) && isset($correo) && isset($login)){
             crearUsuario($nombre,$correo,$login);
-            echo"<script>alert('creado')</script>";
-        }
-        else{
-            echo"<script>alert('no creado')</script>";
         }
         
     }
@@ -29,7 +26,7 @@
     </div>
     <?php include("components/addModal/addModal.php") ?>
     <?php
-        include("../model/models.php");
+
         $elements = getElements();
         include("components/usersTable.php");     
     ?>

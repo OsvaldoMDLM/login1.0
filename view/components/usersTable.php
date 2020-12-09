@@ -6,7 +6,7 @@
                 <thead class="has-background-link-light">
                     <tr>
                     <th class="pr-6">#</th>
-                    <th class="px-5">Nombre</th>
+                    <th class="px-6">Nombre</th>
                     <th class="px-6">Correo</th>
                     <th class="px-6">Login</th>
                     <th class="px-6">Acciones</th>

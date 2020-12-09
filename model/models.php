@@ -58,7 +58,6 @@ function crearUsuario($nombre, $correo, $login){
     if($conexion){
         $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
         $agregado=mysqli_query($conexion,$sql);
-        var_dump($agregado);
         if($agregado){
             echo "elemento agregado";
         }
