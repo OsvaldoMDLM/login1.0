@@ -12,22 +12,20 @@
         $nombre = $_POST['nombreC'];
         $correo = $_POST['correoC'];
         $login =  $_POST['loginC'];
-        //if(isset($nombre) && isset($correo) && isset($login)){
-        //     crearUsuario($nombre,$correo,$login);
-        //     echo"<script>alert('creado')</script>";
-        // }
-        // else{
-        //     echo"<script>alert('no creado')</script>";
-        // }
-        echo"<script>alert('yes')</script>";
+        if(isset($nombre) && isset($correo) && isset($login)){
+            crearUsuario($nombre,$correo,$login);
+            echo"<script>alert('creado')</script>";
+        }
+        else{
+            echo"<script>alert('no creado')</script>";
+        }
+        
     }
-    else{
-        echo"<script>alert('no')</script>";
-    }
+
 ?>
     <h1 class="title is-1 has-text-centered pt-3">Control de Usuario</h1>
     <div class="container is-max-desktop buttons is-right">
-        <button class="button is-primary PX-5 modal-button" type="button" name="AddModal" id="AddModal" data-target="modal" aria-haspopup="true">Agregar Usuario</button>
+        <button class="button is-primary PX-5 modal-button" type="button" name="AddModal" id="AddModal" data-target="modal" data-toggle="modal" aria-haspopup="true">Agregar Usuario</button>
     </div>
     <?php include("components/addModal/addModal.php") ?>
     <?php
