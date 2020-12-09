@@ -59,11 +59,35 @@ function crearUsuario($nombre, $correo, $login){
         $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
         $agregado=mysqli_query($conexion,$sql);
         if($agregado){
-            echo "elemento agregado";
+            echo "<script> alertify.success('Usuario Agregado'); </script>";
         }
-        else {
-            echo "elemento no agregado";
+        else{
+            echo "<script> alertify.Error('Error'); </script>";
         }
+    }
+}
+
+function editarUsuario($id,$nombre, $correo, $login){
+    $conexion=conexion();
+    $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login' WHERE id='$id'";
+    $agregado=mysqli_query($conexion,$sql);
+    if($agregado){
+            echo "<script> alertify.success('Usuario editado'); </script>";
+        }
+        else{
+            echo "<script> alertify.Error('Error'); </script>";
+        }
+}
+
+function eliminarUsuario($id){
+    $conexion=conexion();
+    $sql = "DELETE FROM usuarios WHERE id = '$id';";
+    $agregado=mysqli_query($conexion,$sql);
+    if($agregado){
+        echo "<script> alertify.success('Usuario eliminado'); </script>";
+    }
+    else{
+        echo "<script> alertify.Error('Error'); </script>";
     }
 }
 
