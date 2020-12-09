@@ -8,7 +8,6 @@ if(isset($_POST['crearUsuario'])){
         crearUsuario($nombre,$correo,$login);
     
     }
-    
 }
 
 ?>
