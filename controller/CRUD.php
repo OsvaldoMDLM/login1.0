@@ -22,6 +22,7 @@ if(isset($_POST['editarUsuario'])){
 }
 
 if(isset($_GET['id'])){
+    $id = $_GET['id'];
     if(isset($id)){
         eliminarUsuario($id);
 
