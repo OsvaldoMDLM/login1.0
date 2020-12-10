@@ -3,7 +3,7 @@
         <form action="" method="POST" class="">
           <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
+                <p class="modal-card-title has-text-centered">Agregar Usuario</p>
                 <button class="delete close-modal" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
@@ -30,8 +30,8 @@
                     </div>
               </section>
               <footer class="modal-card-foot">
-                  <button class="button is-success" id="crearUsuario" name="crearUsuario" >Save changes</button>
-                  <button class="button close-modal">Cancel</button>
+                  <button class="button is-success" id="crearUsuario" name="crearUsuario" >Agregar</button>
+                  <button class="button close-modal">Cancelar</button>
               </footer>
             </form>
         </div>

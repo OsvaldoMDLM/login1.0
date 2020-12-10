@@ -1,7 +1,7 @@
 
 
 <div class="container" >
-        <div class="table-container">
+        <div class="table-container" >
             <table class="table is-striped is-narrow is-hoverable is-fullwidth">
                 <thead class="has-background-link-light">
                     <tr>
@@ -21,7 +21,7 @@
                     <td class="px-6"><?php echo $row["login"]; ?></td>
                     <td>
                         <button type="button" class="button is-link" onclick="$('#editmodal').addClass('is-active');">Editar</button>
-                        <a class="button is-danger" >Eliminar</a>
+                        <a class="button is-danger" id="eliminar" name="eliminar" href="../controller/CRUD.php?id=<?php echo $row['id'];?>" >Eliminar</a>
                     </td>
                 </tr>
                     <?php }?>

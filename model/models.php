@@ -59,7 +59,7 @@ function crearUsuario($nombre, $correo, $login){
         $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
         $agregado=mysqli_query($conexion,$sql);
         if($agregado){
-            echo "<script> window.location='./home.php'; alertify.success('Usuario Agregado'); </script>";
+            echo "<script> alertify.success('Usuario Agregado'); window.location='./home.php';</script>";
         }
         else{
             echo "<script> alertify.Error('Error'); </script>";
@@ -67,9 +67,9 @@ function crearUsuario($nombre, $correo, $login){
     }
 }
 
-function editarUsuario($id,$nombre, $correo, $login){
+function editarUsuario($id, $nombre, $correo, $login){
     $conexion=conexion();
-    $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login' WHERE id='$id'";
+    $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
     $agregado=mysqli_query($conexion,$sql);
     if($agregado){
             echo "<script> alertify.success('Usuario editado'); </script>";
@@ -81,10 +81,10 @@ function editarUsuario($id,$nombre, $correo, $login){
 
 function eliminarUsuario($id){
     $conexion=conexion();
-    $sql = "DELETE FROM usuarios WHERE id = '$id';";
-    $agregado=mysqli_query($conexion,$sql);
-    if($agregado){
-        echo "<script> alertify.success('Usuario eliminado'); </script>";
+    $sql = "DELETE FROM usuarios WHERE id = '$id'";
+    echo $resultado=mysqli_query($conexion,$sql);
+    if($resultado){
+        echo "<script>window.location='./home.php'; alertify.success('Usuario editado'); </script>";
     }
     else{
         echo "<script> alertify.Error('Error'); </script>";

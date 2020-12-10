@@ -3,11 +3,6 @@
 <head>
 <?php include("components/head.php")  ?>
     <title>Home</title>
-    <link rel="stylesheet" href="../libraries/css/alertify.css">
-    <link rel="stylesheet" href="../libraries/css/themes/default.css">
-
-    <script src="../libraries/alertify.js"></script>
-    <script src="../libraries/alertify.min.js"></script>
 </head>
 <body>
 

@@ -10,4 +10,24 @@ if(isset($_POST['crearUsuario'])){
     }
 }
 
+if(isset($_POST['editarUsuario'])){
+    $id = $_POST['id'];
+    $nombre = $_POST['nombreH'];
+    $correo = $_POST['correoH'];
+    $login =  $_POST['loginH'];
+    if(isset($nombre) && isset($correo) && isset($login)){
+        editarUsuario($id,$nombre,$correo,$login);
+    
+    }
+}
+
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    if(isset($id)){
+        eliminarUsuario($id);
+    }
+
+}
+
+
 ?>

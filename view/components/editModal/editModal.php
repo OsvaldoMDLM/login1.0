@@ -9,6 +9,12 @@
                 </header>
             <section class="modal-card-body">
 
+            <div class="field">
+                        <div class="control">
+                            <input class="input" type="hidden" id="idH" name="id">
+                        </div>
+                </div>
+
                 <div class="field">
                     <label class="label">nombre</label>
                         <div class="control">
@@ -35,7 +41,7 @@
 
             <footer class="modal-card-foot">
                 <button class="button is-success" id="editarUsuario" name="editarUsuario">Save changes</button>
-                <button class="button close-modal" id="eliminarUsuario" name="eliminarUsuario">Cancel</button>
+                <button class="button close-modal">Cancel</button>
             </footer>
         </div>
     </form>
