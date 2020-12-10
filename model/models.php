@@ -80,7 +80,7 @@ function eliminarUsuario($id){
     $sql = "DELETE FROM usuarios WHERE id = '$id'";
     $resultado=mysqli_query($conexion,$sql);
     if($resultado){
-        echo "<script> alertify.success('Usuario Agregado'); window.location='../home.php';</script>";
+        header("Location: ../view/home.php");
     }
 }
 

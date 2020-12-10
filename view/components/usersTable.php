@@ -20,7 +20,7 @@
                     <td class="px-6"><?php echo $row["correo"]; ?></td>
                     <td class="px-6"><?php echo $row["login"]; ?></td>
                     <td>
-                        <button type="button" class="button is-link" onclick="$('#editmodal').addClass('is-active');">Editar</button>
+                        <button type="button" class="button is-link" onclick="$('#editmodal').addClass('is-active');" >Editar</button>
                         <a class="button is-danger" id="eliminar" name="eliminar" href="../controller/CRUD.php?id=<?php echo $row['id'];?>" >Eliminar</a>
                     </td>
                 </tr>
