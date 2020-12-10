@@ -11,12 +11,12 @@ if(isset($_POST['crearUsuario'])){
 }
 
 if(isset($_POST['id'])){
-    $id=$_POST['id'];
+    
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
     $login =  $_POST['login'];
     if(isset($nombre) && isset($correo) && isset($login)){
-        editarUsuario($id,$nombre,$correo,$login);
+        editarUsuario($nombre,$correo,$login);
     
     }
 }
