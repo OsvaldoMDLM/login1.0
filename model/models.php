@@ -70,24 +70,17 @@ function crearUsuario($nombre, $correo, $login){
 function editarUsuario($id, $nombre, $correo, $login){
     $conexion=conexion();
     $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
-    $agregado=mysqli_query($conexion,$sql);
-    if($agregado){
-            echo "<script> alertify.success('Usuario editado'); </script>";
-        }
-        else{
-            echo "<script> alertify.Error('Error'); </script>";
-        }
+    $editado=mysqli_query($conexion,$sql);
+
+    
 }
 
 function eliminarUsuario($id){
     $conexion=conexion();
     $sql = "DELETE FROM usuarios WHERE id = '$id'";
-    echo $resultado=mysqli_query($conexion,$sql);
+    $resultado=mysqli_query($conexion,$sql);
     if($resultado){
-        echo "<script>window.location='./home.php'; alertify.success('Usuario editado'); </script>";
-    }
-    else{
-        echo "<script> alertify.Error('Error'); </script>";
+        echo "<script> alertify.success('Usuario Agregado'); window.location='../home.php';</script>";
     }
 }
 
