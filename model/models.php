@@ -59,7 +59,7 @@ function crearUsuario($nombre, $correo, $login){
         $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
         $agregado=mysqli_query($conexion,$sql);
         if($agregado){
-            echo "<script> alertify.success('Usuario Agregado'); </script>";
+            echo "<script> window.location='./home.php'; alertify.success('Usuario Agregado'); </script>";
         }
         else{
             echo "<script> alertify.Error('Error'); </script>";
