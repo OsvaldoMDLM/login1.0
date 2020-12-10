@@ -71,7 +71,12 @@ function editarUsuario($id, $nombre, $correo, $login){
     $conexion=conexion();
     $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
     $editado=mysqli_query($conexion,$sql);
-
+    if($editado){
+        echo "<script> alertify.success('Usuario Agregado'); window.location='./home.php';</script>";
+    }
+    else{
+        echo "<script> alertify.Error('Error'); </script>";
+    }
     
 }
 
