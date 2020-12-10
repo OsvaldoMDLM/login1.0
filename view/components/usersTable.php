@@ -20,8 +20,8 @@
                     <td class="px-6"><?php echo $row["correo"]; ?></td>
                     <td class="px-6"><?php echo $row["login"]; ?></td>
                     <td>
-                        <button type="button" class="button is-link">Editar</button>
-                        <a class="button is-danger">Eliminar</a>
+                        <button type="button" class="button is-link" onclick="$('#editmodal').addClass('is-active');">Editar</button>
+                        <a class="button is-danger" >Eliminar</a>
                     </td>
                 </tr>
                     <?php }?>
