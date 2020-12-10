@@ -24,6 +24,7 @@ if(isset($_POST['editarUsuario'])){
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     if(isset($id)){
+        include_once('../model/models.php');
         eliminarUsuario($id);
 
     }
