@@ -15,11 +15,10 @@ if(isset($_POST['editar'])){
     $nombre=$_POST['nombre'];
     $correo=$_POST['correo'];
     $login=$_POST['login'];
-    if(isset($nombre) && isset($correo) && isset($login)){
+    if(isset($nombre) && isset($correo) && isset($login) && isset($id)){
         include_once('../model/models.php');
         editarUsuario($id,$nombre,$correo,$login);
     }
-    
 }
 
 if(isset($_GET['id'])){

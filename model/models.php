@@ -69,7 +69,7 @@ function crearUsuario($nombre, $correo, $login){
 
 function editarUsuario($id, $nombre, $correo, $login){
     $conexion=conexion();
-    $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
+    $sql = "UPDATE usuarios SET nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
     $editado=mysqli_query($conexion,$sql);
     if($editado){
         header("Location: ../view/home.php");
