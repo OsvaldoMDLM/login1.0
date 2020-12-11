@@ -17,7 +17,6 @@
         <button class="button is-primary PX-5 modal-button" type="button" name="AddModal" id="AddModal"  data-target= aria-haspopup="true">Agregar Usuario</button>
     </div>
     <?php include("components/addModal/addModal.php") ?>
-    <?php include("components/editModal/editModal.php")?>
     <?php
 
         $elements = getElements();

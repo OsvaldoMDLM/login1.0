@@ -7,19 +7,18 @@ if(isset($_POST['crearUsuario'])){
     $login =  $_POST['loginC'];
     if(isset($nombre) && isset($correo) && isset($login)){
         crearUsuario($nombre,$correo,$login);
-    
     }
 }
 
-if(isset($_POST['actualizadatos'])){
-    $id = $_POST['id'];
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $login =  $_POST['login'];
+if(isset($_POST['enviar'])){
+    $id=$_GET['id'];
+    $nombre=$_POST['nombre'];
+    $correo=$_POST['correo'];
+    $login=$_POST['login'];
     if(isset($nombre) && isset($correo) && isset($login)){
         editarUsuario($id,$nombre,$correo,$login);
-    
     }
+    
 }
 
 if(isset($_GET['id'])){
@@ -30,5 +29,3 @@ if(isset($_GET['id'])){
 
     }
 }
-
-?>
