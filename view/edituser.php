@@ -11,7 +11,6 @@
 
     <?php 
         include("components/header.php");
-        require_once('../controller/CRUD.php');
     ?>
 
     <!-- Cuerpo del documento -->
