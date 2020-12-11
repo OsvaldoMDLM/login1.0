@@ -2,7 +2,7 @@
 
 <div class="modal" id="editmodal">
     <div class="modal-background"></div>
-    <form action="" method="POST">
+    <form action="../controller/CRUD.php" method="POST">
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Actualizar Usuario</p>
@@ -13,21 +13,21 @@
                 <div class="field">
                     <label class="label">nombre</label>
                         <div class="control">
-                            <input class="input" type="text" id="nombre" name="nombre" value="<?php echo $nombre  ?>" placeholder="e.g Alex Smith">
+                            <input class="input" type="text" id="nombre" name="nombre" placeholder="e.g Alex Smith">
                         </div>
                 </div>
 
                 <div class="field">
                     <label class="label">correo</label>
                         <div class="control">
-                            <input class="input" type="email" id="correo" name="correo" value="<?php echo $correo ?>" placeholder="e.g. alexsmith@gmail.com">
+                            <input class="input" type="email" id="correo" name="correo"  placeholder="e.g. alexsmith@gmail.com">
                         </div>
                 </div>
 
                 <div class="field">
                     <label class="label">login</label>
                         <div class="control">
-                            <input class="input" type="text"  id="login" name="login" value="<?php echo $login ?>"placeholder="e.g. Alex">
+                            <input class="input" type="text"  id="login" name="login" placeholder="e.g. Alex">
                         </div>
                 </div>
 
