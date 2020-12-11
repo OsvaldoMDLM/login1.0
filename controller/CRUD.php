@@ -11,7 +11,7 @@ if(isset($_POST['crearUsuario'])){
 }
 
 if(isset($_POST['editar'])){
-    $id=$_GET['id'];
+    $id=$_POST['id'];
     $nombre=$_POST['nombre'];
     $correo=$_POST['correo'];
     $login=$_POST['login'];

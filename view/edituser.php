@@ -18,7 +18,7 @@
         <div class="columns is-centered">
             <div class="column is-three-fifths is-offset-one-fifth">
                 <h1 class="title is-2">Editar usuario</h1>
-                <form name="frmdatos" action="../controller/CRUD.php?id=<?php echo $_POST['id'];?>" method="POST">
+                <form name="frmdatos" action="../controller/CRUD.php" method="POST">
                     <div class="field">
                         <label class="label">Nombre</label>
                         <div class="control">
@@ -33,7 +33,7 @@
                         <div class="control">
                             <div class="columns">
                                 <div class="column is-two-fifths">
-                                    <input class="input" type="email" id="correo" name="correo" placeholder="e.g. alexsmith@gmail.com" value="<?php echo$correo?>""></div>
+                                    <input class="input" type="email" id="correo" name="correo" placeholder="e.g. alexsmith@gmail.com" value="<?php echo$correo?>"></div>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,15 @@
                             </div>
                         </div>
                     </div>
-                    <input class="input" type="hidden" id="login" name="login" value="<?php echo$id?>"></div>
+                    <div class="field">
+                        <div class="control">
+                            <div class="columns">
+                                <div class="column is-two-fifths">
+                                <input class="input" type="hidden" id="login" name="login" value="<?php echo$id?>"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
 
                     <div class="control">
                         <button id="editar" name="editar" class="button is-success">&nbsp;Actualizar datos&nbsp;</button>
