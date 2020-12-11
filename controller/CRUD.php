@@ -10,7 +10,7 @@ if(isset($_POST['crearUsuario'])){
     }
 }
 
-if(isset($_POST['enviar'])){
+if(isset($_POST['editar'])){
     $id=$_GET['id'];
     $nombre=$_POST['nombre'];
     $correo=$_POST['correo'];

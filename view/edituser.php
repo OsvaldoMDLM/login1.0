@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="control">
-                        <button id="enviar" name="enviar" class="button is-success">&nbsp;Actualizar datos&nbsp;</button>
+                        <button id="enviar" name="editar" class="button is-success">&nbsp;Actualizar datos&nbsp;</button>
                     </div>
                 </form>
 
