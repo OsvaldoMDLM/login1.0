@@ -18,7 +18,6 @@
         <div class="columns is-centered">
             <div class="column is-three-fifths is-offset-one-fifth">
                 <h1 class="title is-2">Editar usuario</h1>
-                <?php $id=$_GET['id']; ?>
                 <form name="frmdatos" action="../controller/CRUD.php?id=<?php echo $_GET['id'];?>" method="POST">
                     <div class="field">
                         <label class="label">Nombre</label>
