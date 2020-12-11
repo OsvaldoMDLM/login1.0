@@ -16,6 +16,7 @@ if(isset($_POST['editar'])){
     $correo=$_POST['correo'];
     $login=$_POST['login'];
     if(isset($nombre) && isset($correo) && isset($login)){
+        include_once('../model/models.php');
         editarUsuario($id,$nombre,$correo,$login);
     }
     

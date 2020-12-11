@@ -72,7 +72,7 @@ function editarUsuario($id, $nombre, $correo, $login){
     $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
     $editado=mysqli_query($conexion,$sql);
     if($editado){
-        echo "<script> alertify.success('Usuario Actualizado'); setTimeout(function(){window.location='./home.php'},1200);</script>";
+        header("Location: ../view/home.php");
     }
     else{
         echo "<script> alertify.Error('Error'); </script>";
