@@ -2,7 +2,8 @@
 
 <div class="modal" id="editmodal">
     <div class="modal-background"></div>
-    <form action="../controller/CRUD.php" method="POST">
+
+    <form action="" method="POST">
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Actualizar Usuario</p>
@@ -42,7 +43,7 @@
             </section>
 
             <footer class="modal-card-foot">
-                <a class="button is-success"  id="actualizadatos">Save changes</a>
+                <a class="button is-success"  id="actualizadatos" name="actualizadatos">Save changes</a>
                 <button class="button close-modal">Cancel</button>
             </footer>
         </div>
