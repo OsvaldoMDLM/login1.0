@@ -1,5 +1,6 @@
 <?php
 
+
 if(isset($_POST['crearUsuario'])){
     $nombre = $_POST['nombreC'];
     $correo = $_POST['correoC'];

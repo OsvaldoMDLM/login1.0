@@ -59,8 +59,7 @@ function crearUsuario($nombre, $correo, $login){
         $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
         $agregado=mysqli_query($conexion,$sql);
         if($agregado){
-            echo "<script> alertify.success('Usuario Agregado');</script>";
-            header("location:./home.php");
+            echo "<script> alertify.success('Usuario Agregado'); setTimeout(function(){window.location='./home.php'},1200);</script>";
         }
         else{
             echo "<script> alertify.Error('Error'); </script>";
@@ -73,7 +72,7 @@ function editarUsuario($id, $nombre, $correo, $login){
     $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
     $editado=mysqli_query($conexion,$sql);
     if($editado){
-        echo "<script> alertify.success('Usuario Agregado'); window.location='./home.php';</script>";
+        echo "<script> alertify.success('Usuario Actualizado'); setTimeout(function(){window.location='./home.php'},1200);</script>";
     }
     else{
         echo "<script> alertify.Error('Error'); </script>";
