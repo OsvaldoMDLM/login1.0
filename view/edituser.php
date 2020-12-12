@@ -13,9 +13,10 @@
         include("components/header.php");
         include("../model/models.php");
         $conexion=conexion();
-        if(isset($_GET['id'])){
+        $idU= $_GET['id'];
+        if(isset($idU)){
 
-            $sql="SELECT * FROM usuarios WHERE id=$_GET[id]";
+            $sql="SELECT * FROM usuarios WHERE id=$idU";
             $resultado = mysqli_query($conexion,$sql);
             $row = (mysqli_fetch_array($resultado));
         }
