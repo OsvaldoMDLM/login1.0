@@ -5,7 +5,7 @@
     $host="localhost";
     $user="root";
     $password="";
-    $db="actividad18";
+    $db="activity20";
 
     $conexion = mysqli_connect($host,$user,$password,$db);
     if(!$conexion)
@@ -59,7 +59,7 @@ function crearUsuario($nombre, $correo, $login){
         $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
         $agregado=mysqli_query($conexion,$sql);
         if($agregado){
-            echo "<script> alertify.success('Usuario Agregado'); window.location='./home.php';</script>";
+            echo "<script> alertify.success('Usuario Agregado'); setTimeout(function(){window.location='./home.php'},1200);</script>";
         }
         else{
             echo "<script> alertify.Error('Error'); </script>";
@@ -69,9 +69,14 @@ function crearUsuario($nombre, $correo, $login){
 
 function editarUsuario($id, $nombre, $correo, $login){
     $conexion=conexion();
-    $sql = "UPDATE usuarios set nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
+    $sql = "UPDATE usuarios SET nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
     $editado=mysqli_query($conexion,$sql);
-
+    if($editado){
+        header("Location: ../view/home.php");
+    }
+    else{
+        echo "<script> alertify.Error('Error'); </script>";
+    }
     
 }
 
@@ -80,7 +85,7 @@ function eliminarUsuario($id){
     $sql = "DELETE FROM usuarios WHERE id = '$id'";
     $resultado=mysqli_query($conexion,$sql);
     if($resultado){
-        echo "<script> alertify.success('Usuario Agregado'); window.location='../home.php';</script>";
+        header("Location: ../view/home.php");
     }
 }
 
