@@ -5,7 +5,7 @@
     $host="localhost";
     $user="root";
     $password="";
-    $db="activity20";
+    $db="actividad18";
 
     $conexion = mysqli_connect($host,$user,$password,$db);
     if(!$conexion)
