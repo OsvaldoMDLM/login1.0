@@ -26,6 +26,7 @@
     <?php include("components/footer.php")  ?>
 
     <script src="components/addModal/jsModal.js"></script>
+    <script src="components/script.js"></script>
     <script src="components/editModal/editModal.js"></script>
 </body>
 </html>
