@@ -19,7 +19,7 @@
             $sql="SELECT * FROM usuarios WHERE id=$idU";
             $resultado = mysqli_query($conexion,$sql);
             $row = (mysqli_fetch_array($resultado));
-        }
+        
     ?>
 
     <!-- Cuerpo del documento -->
@@ -32,7 +32,7 @@
                         <label class="label">Nombre</label>
                         <div class="control">
                             <div class="columns">
-                                <div class="column is-three-fifths"><input class="input" type="text" id="nombre" name="nombre" placeholder="e.g Alex Smith" value="<?php $row["nombre"]?>"></div>
+                                <div class="column is-three-fifths"><input class="input" type="text" id="nombre" name="nombre" placeholder="e.g Alex Smith" value="<?php echo $row["nombre"]?>"></div>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                         <div class="control">
                             <div class="columns">
                                 <div class="column is-two-fifths">
-                                    <input class="input" type="email" id="correo" name="correo" placeholder="e.g. alexsmith@gmail.com" value="<?php $row["correo"]?>"></div>
+                                    <input class="input" type="email" id="correo" name="correo" placeholder="e.g. alexsmith@gmail.com" value="<?php echo $row["correo"]?>"></div>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                         <div class="control">
                             <div class="columns">
                                 <div class="column is-two-fifths">
-                                    <input class="input" type="text" id="login" name="login" placeholder="e.g. AlexS" value="<?php $row["login"]?>"></div>
+                                    <input class="input" type="text" id="login" name="login" placeholder="e.g. AlexS" value="<?php echo $row["login"]?>"></div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                         <div class="control">
                             <div class="columns">
                                 <div class="column is-two-fifths">
-                                    <input class="input" type="hidden" id="id" name="id" value="<?php $row["id"]?>"></div>
+                                    <input class="input" type="hidden" id="id" name="id" value="<?php echo $row["id"]?>"></div>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
     </div>
 
     <!-- pié de página -->
-    <?php include("components/footer.php")  ?>
+    <?php } include("components/footer.php")  ?>
 </body>
 
 </html>
