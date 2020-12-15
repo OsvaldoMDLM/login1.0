@@ -9,9 +9,7 @@ if(isset($_POST['login']))
 }
 
 /****Session****/
-if ($userSession->existSession('user')) {
-    include_once('./views/home.php');
- } else {
-    include_once('./views/login.php');
- }
+
+
+
 ?>

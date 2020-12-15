@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     $uri = '../session/logout.php';
     if (file_exists("../controller/sessions.php")) {
         $uri = '../session/logout.php';
@@ -16,11 +17,14 @@
     </div>
 
 <?php    $userSession = new UserSession();
+            $userSession->setCurrentUser('nombre');
+
+
             ?>       
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-end">
         <div class="navbar-item">
-            <p class="mr-3 px-3 has-text-white has-background-primary-dark "><strong class="has-text-white">Bienvenido: </strong>  <?php echo $_SESSION['user'];?> </p>
+            <p class="mr-3 px-3 has-text-white has-background-primary-dark "><strong class="has-text-white">Bienvenido: </strong>  <?php echo $_SESSION['nombre'];?> </p>
             <div class="buttons">
                 <a class="button is-warning pr-5 mr-4" href="<?php echo($uri) ?>">
                     Cerrar Sesion
@@ -29,4 +33,5 @@
         </div>
     </div>
 </nav>
+
 </section>

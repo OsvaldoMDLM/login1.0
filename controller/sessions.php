@@ -8,19 +8,19 @@ class UserSession
         }
     }
 
-    public function setCurrentUser($user)
+    public function setCurrentUser($nombre)
     {
-        $_SESSION['user'] = $user;
+        $_SESSION['nombre'] = $nombre;
     }
 
-    public function existSession($name)
+    public function existSession($nombre)
     {
-        return isset($_SESSION["$name"]);
+        return isset($_SESSION["$nombre"]);
     }
 
     public function getCurrentUser()
     {
-        return $_SESSION['user'];
+        return $_SESSION['nombre'];
     }
 
     public function closeSession()

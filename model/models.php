@@ -15,6 +15,7 @@
 }
 
 function login() {
+    
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
 
