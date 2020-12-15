@@ -1,5 +1,4 @@
 <?php
-
     function conexion(){
 
     $host="localhost";
@@ -19,13 +18,12 @@ function login() {
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
 
-	$conexion=conexion();
 
+	$conexion=conexion();
     $consulta =  "SELECT * FROM usuarios WHERE nombre='$nombre' and correo='$correo' ";
     $resultado = mysqli_query($conexion,$consulta);
-
     $filas = mysqli_num_rows($resultado);
-    if($filas){
+    if($filas>0){
         header("location:./view/home.php");
     }
     else {

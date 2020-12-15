@@ -8,7 +8,17 @@
 </head>
 <body>
 
-    <?php include("components/header.php") ?>
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <a href="../../actividad20/index.php">
+            <h1 class="title">Universidad de Colima</h1>
+            <h2 class="subtitle">Facultad de Telemática</h2>
+            </a>
+        </div>
+    </div>
+</section>
+
     <div class="container">
         <h1 class=" level-item title is-1 mt-3 mb-0">control de usuario</h1>
         <h2 class=" level-item title is-3 my-5">El usuario no existe</h2>

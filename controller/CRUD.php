@@ -1,6 +1,6 @@
 <?php
 
-
+/****Añadir un usuario nuevo****/
 if(isset($_POST['crearUsuario'])){
     $nombre = $_POST['nombreC'];
     $correo = $_POST['correoC'];
@@ -9,7 +9,7 @@ if(isset($_POST['crearUsuario'])){
         crearUsuario($nombre,$correo,$login);
     }
 }
-
+/****Actualizar usuario****/
 if(isset($_POST['editar'])){
     $id=$_POST['id'];
     $nombre=$_POST['nombre'];
@@ -20,7 +20,7 @@ if(isset($_POST['editar'])){
         editarUsuario($id,$nombre,$correo,$login);
     }
 }
-
+/****eliminar usuario****/
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     if(isset($id)){
@@ -29,3 +29,6 @@ if(isset($_GET['id'])){
 
     }
 }
+
+
+

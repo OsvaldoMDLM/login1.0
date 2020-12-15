@@ -1,5 +1,4 @@
 
-
 <div class="container" >
         <div class="table-container" >
             <table class="table is-striped is-narrow is-hoverable is-fullwidth">
