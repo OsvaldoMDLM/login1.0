@@ -19,8 +19,8 @@
                     <td class="px-6"><?php echo $row["correo"]; ?></td>
                     <td class="px-6"><?php echo $row["login"]; ?></td>
                     <td>
-                        <a type="button" class="button is-link" id="EditModal" href="../view/edituser.php?id=<?php echo $row['id']?>">Editar</a>
-                        <a class="button is-danger" id="eliminar" name="eliminar" href="../controller/CRUD.php?id=<?php echo $row['id'];?>" >Eliminar</a>
+                        <a type="button" class="button is-link" href="../view/edituser.php?id=<?php echo $row['id']?>"><i class="fas fa-user-edit"></i></a>
+                        <a class="button is-danger" id="eliminar" name="eliminar" href="../controller/CRUD.php?id=<?php echo $row['id'];?>" ><i class="fas fa-user-times"></i></a>
                     </td>
                 </tr>
                     <?php }?>

@@ -25,11 +25,10 @@
     <div class="navbar-end">
         <div class="navbar-item">
             <p class="mr-3 px-3 has-text-white has-background-primary-dark "><strong class="has-text-white">Bienvenido: </strong>  <?php echo $_SESSION['nombre'];?> </p>
-            <div class="buttons">
-                <a class="button is-warning pr-5 mr-4" href="<?php echo($uri) ?>">
-                    Cerrar Sesion
+                <a class="pr-5 mr-4" href="<?php echo($uri) ?>">
+                
+                    <u> Cerrar Sesion <i class="fas fa-sign-out-alt"></i> </u>
                 </a>
-            </div>
         </div>
     </div>
 </nav>
