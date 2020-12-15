@@ -24,11 +24,11 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-end">
         <div class="navbar-item">
-            <p class="mr-3 px-3 has-text-white has-background-primary-dark "><strong class="has-text-white">Bienvenido: </strong>  <?php echo $_SESSION['nombre'];?> </p>
-                <a class="pr-5 mr-4" href="<?php echo($uri) ?>">
-                
-                    <u> Cerrar Sesion <i class="fas fa-sign-out-alt"></i> </u>
-                </a>
+            <p class="mr-1 px-3 has-text-white has-background-primary-dark "><strong class="has-text-white">Bienvenido: </strong>  <?php echo $_SESSION['nombre'];?> </p>
+            <strong class="has-text-white">| </strong>    
+            <a class="pr-5 ml-1" href="<?php echo($uri) ?>">
+                <u> Cerrar Sesion <i class="fas fa-sign-out-alt"></i> </u>
+            </a>
         </div>
     </div>
 </nav>
