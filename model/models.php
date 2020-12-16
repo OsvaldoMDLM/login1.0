@@ -1,4 +1,4 @@
-<?php
+<?php  
     function conexion(){
 
     $host="localhost";
@@ -15,7 +15,8 @@
 }
 
 function login() {
-    
+
+    $userSession = new UserSession();
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
 
@@ -25,6 +26,8 @@ function login() {
     $resultado = mysqli_query($conexion,$consulta);
     $filas = mysqli_num_rows($resultado);
     if($filas>0){
+
+        $userSession->setCurrentUser($nombre);
         header("location:./view/home.php");
     }
     else {
