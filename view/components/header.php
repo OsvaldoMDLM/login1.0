@@ -1,8 +1,8 @@
 <?php 
     
-    $uri = '../session/logout.php';
+    $uri = '../controller/logout.php';
     if (file_exists("../controller/sessions.php")) {
-        $uri = '../session/logout.php';
+        $uri = '../controller/logout.php';
         include("../controller/sessions.php");
     }
     $userSession = new UserSession();
@@ -10,7 +10,7 @@
 <section class="hero is-primary">
     <div class="hero-body">
         <div class="container">
-            <a href="../../actividad20/index.php">
+            <a href="../controller/logout.php">
             <h1 class="title">Universidad de Colima</h1>
             <h2 class="subtitle">Facultad de Telemática</h2>
             </a>
