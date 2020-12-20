@@ -17,17 +17,18 @@
 function login() {
 
     $userSession = new UserSession();
-    $nombre = $_POST['nombre'];
+    $user = $_POST['user'];
+    //$nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
 
 
 	$conexion=conexion();
-    $consulta =  "SELECT * FROM usuarios WHERE nombre='$nombre' and correo='$correo' ";
+    $consulta =  "SELECT * FROM usuarios WHERE login='$user' and correo='$correo' ";
     $resultado = mysqli_query($conexion,$consulta);
     $filas = mysqli_num_rows($resultado);
     if($filas>0){
 
-        $userSession->setCurrentUser($nombre);
+        $userSession->setCurrentUser($user);
         header("location:./view/home.php");
     }
     else {

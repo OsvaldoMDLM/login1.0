@@ -6,10 +6,10 @@
 
                 <form name="frmdatos" action="" method="POST">
                     <div class="field">
-                        <label class="label">Nombre</label>
+                        <label class="label">Nombre de usuario</label>
                         <div class="control">
                             <div class="columns">
-                                <div class="column is-three-fifths"><input class="input" type="text" id="nombre" name="nombre" placeholder="e.g Alex Smith" required ></div>
+                                <div class="column is-three-fifths"><input class="input" type="text" id="user" name="user" placeholder="e.g Alex Smith" required ></div>
                                 </div>
                             </div>
                         </div>
