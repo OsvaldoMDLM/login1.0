@@ -1,20 +1,21 @@
-<?php  
-    function conexion(){
+<?php
+function conexion()
+{
 
-    $host="localhost";
-    $user="root";
-    $password="";
-    $db="activity20";
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $db = "activity20";
 
-    $conexion = mysqli_connect($host,$user,$password,$db);
-    if(!$conexion)
-    {
-        die("no hay conexion".mysqli_connect_error());
+    $conexion = mysqli_connect($host, $user, $password, $db);
+    if (!$conexion) {
+        die("no hay conexion" . mysqli_connect_error());
     }
     return $conexion;
 }
 
-function login() {
+function login()
+{
 
     $userSession = new UserSession();
     $user = $_POST['user'];
@@ -22,33 +23,31 @@ function login() {
     $correo = $_POST['correo'];
 
 
-	$conexion=conexion();
+    $conexion = conexion();
     $consulta =  "SELECT * FROM usuarios WHERE login='$user' and correo='$correo' ";
-    $resultado = mysqli_query($conexion,$consulta);
+    $resultado = mysqli_query($conexion, $consulta);
     $filas = mysqli_num_rows($resultado);
-    if($filas>0){
+    if ($filas > 0) {
 
         $userSession->setCurrentUser($user);
         header("location:./view/home.php");
-    }
-    else {
+    } else {
         header("location:./view/userNoFound.php");
     }
 
 
     mysqli_free_result($resultado);
     mysqli_close($conexion);
-
 }
 
-function getElements(){
-    $conexion=conexion();
-    if($conexion)
-    {
-        $sql="SELECT * from usuarios";
-        $resultado=mysqli_query($conexion,$sql);
+function getElements()
+{
+    $conexion = conexion();
+    if ($conexion) {
+        $sql = "SELECT * from usuarios";
+        $resultado = mysqli_query($conexion, $sql);
 
-        if($resultado){
+        if ($resultado) {
             return $resultado;
         }
         return false;
@@ -56,40 +55,38 @@ function getElements(){
     return false;
 }
 
-function crearUsuario($nombre, $correo, $login){
-    $conexion=conexion();
-    if($conexion){
-        $sql="INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
-        $agregado=mysqli_query($conexion,$sql);
-        if($agregado){
+function crearUsuario($nombre, $correo, $login)
+{
+    $conexion = conexion();
+    if ($conexion) {
+        $sql = "INSERT INTO usuarios (id, nombre, correo, login) VALUES (NULL,'$nombre','$correo','$login')";
+        $agregado = mysqli_query($conexion, $sql);
+        if ($agregado) {
             echo "<script> alertify.success('Usuario Agregado'); setTimeout(function(){window.location='./home.php'},1200);</script>";
-        }
-        else{
+        } else {
             echo "<script> alertify.Error('Error'); </script>";
         }
     }
 }
 
-function editarUsuario($id, $nombre, $correo, $login){
-    $conexion=conexion();
+function editarUsuario($id, $nombre, $correo, $login)
+{
+    $conexion = conexion();
     $sql = "UPDATE usuarios SET nombre='$nombre',correo='$correo',login='$login'  WHERE id='$id'";
-    $editado=mysqli_query($conexion,$sql);
-    if($editado){
+    $editado = mysqli_query($conexion, $sql);
+    if ($editado) {
         header("Location: ../view/home.php");
-    }
-    else{
+    } else {
         echo "<script> alertify.Error('Error'); </script>";
     }
-    
 }
 
-function eliminarUsuario($id){
-    $conexion=conexion();
+function eliminarUsuario($id)
+{
+    $conexion = conexion();
     $sql = "DELETE FROM usuarios WHERE id = '$id'";
-    $resultado=mysqli_query($conexion,$sql);
-    if($resultado){
+    $resultado = mysqli_query($conexion, $sql);
+    if ($resultado) {
         header("Location: ../view/home.php");
     }
 }
-
-?>
